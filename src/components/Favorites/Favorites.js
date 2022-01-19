@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Saved.css';
+import './Favorites.css';
 
-const Saved = () => {
+const Favorites = () => {
   return (
     <div>
         Test2
@@ -10,4 +10,4 @@ const Saved = () => {
   );
 }
 
-export default Saved;
+export default Favorites;
