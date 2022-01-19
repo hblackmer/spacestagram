@@ -1,11 +1,14 @@
 import React from 'react';
+import { Container } from 'reactstrap';
+import Picture from '../Picture/Picture';
 
 import './Main.css';
 
 const Main = () => {
   return (
-    <div>
-    </div>
+    <Container>        
+        <Picture />
+    </Container>
   );
 }
 
