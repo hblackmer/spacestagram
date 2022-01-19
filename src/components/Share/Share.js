@@ -8,7 +8,7 @@ import {
     EmailIcon
 } from "react-share";
 
-const Share = ({ picture, title, explanation }) => {
+const Share = ({ picture }) => {
     return (
         <div className="mx-auto mb-3">
             <span>Share: </span>

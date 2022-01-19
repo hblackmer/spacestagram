@@ -36,8 +36,6 @@ const Picture = ({ picture, title, explanation, loading }) => {
                     </CardBody>
                     <Share
                         picture={picture}
-                        title={title}
-                        explanation={explanation}
                     />
                 </Fragment>
                 :
