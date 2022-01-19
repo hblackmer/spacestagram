@@ -15,9 +15,9 @@ import Navigation from '../Navigation/Navigation';
 
 const App = () => {
     return (
-        <Fragment>
+        <Fragment className="app">
             <Navigation />
-            <Router className="App">
+            <Router>
                 <Switch>
                     <Route path="/" exact>
                         <Main />
