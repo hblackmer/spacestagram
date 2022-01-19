@@ -3,3 +3,7 @@ a {
     font-family: 'Space Mono', monospace;
     font-weight: bold;
 }
+
+.navbar {
+    border-bottom: 1px outset white;
+}

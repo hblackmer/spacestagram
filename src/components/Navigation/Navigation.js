@@ -9,7 +9,7 @@ import logo from '../img/spacestagram_name.png';
 
 const Navigation = () => {
     return (
-        <div>
+        <div className="navbar">
             <Navbar
                 color="light"
                 expand="md"
