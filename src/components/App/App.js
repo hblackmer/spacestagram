@@ -10,7 +10,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Main from '../Main/Main';
-import Saved from '../Saved/Saved';
+import Favorites from '../Favorites/Favorites';
 import Navigation from '../Navigation/Navigation';
 
 const App = () => {
@@ -22,8 +22,8 @@ const App = () => {
                     <Route path="/" exact>
                         <Main />
                     </Route>
-                    <Route path="/saved" exact>
-                        <Saved />
+                    <Route path="/favorites" exact>
+                        <Favorites />
                     </Route>
                     <Redirect to="/" />
                 </Switch>

@@ -24,7 +24,7 @@ const Navigation = () => {
                         navbar
                     >
                         <NavItem>
-                            <NavLink href="/saved">
+                            <NavLink href="/favorites">
                                 Favorites
                             </NavLink>
                         </NavItem>
