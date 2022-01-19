@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Spinner } from 'reactstrap';
-import Picture from '../Picture/Picture';
+import { Container } from 'reactstrap';
+import Info from '../Info/Info';
 import axios from 'axios';
 import { API_KEY } from '../key';
 
@@ -33,7 +33,7 @@ const Main = () => {
     }
     return (
         <Container className="main mx-auto">
-            <Picture 
+            <Info 
                 picture={picture}
                 title={title}
                 explanation={explanation}

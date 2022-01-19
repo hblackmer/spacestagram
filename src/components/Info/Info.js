@@ -5,9 +5,9 @@ import {
 } from 'reactstrap';
 import Share from '../Share/Share';
 
-import './Picture.css';
+import './Info.css';
 
-const Picture = ({ picture, title, explanation, loading }) => {
+const Info = ({ picture, title, explanation, loading }) => {
     return (
         <Card className="card text-white bg-black mb-5">
             {loading ?
@@ -45,4 +45,4 @@ const Picture = ({ picture, title, explanation, loading }) => {
     );
 }
 
-export default Picture;
+export default Info;
