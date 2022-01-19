@@ -4,7 +4,7 @@ import { Card, CardImg, CardText, CardBody, CardLink,
 
 import './Picture.css';
 
-const Picture = () => {
+const Picture = ({picture}) => {
     return (
         <Card>
         <CardBody>
@@ -20,7 +20,7 @@ const Picture = () => {
         </CardBody>
         <img
           alt="Card image cap"
-          src="https://picsum.photos/318/180"
+          src={picture}
           width="100%"
         />
         <CardBody>
