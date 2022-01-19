@@ -5,3 +5,7 @@
     margin-top: 100px;
     font-family: 'Helvetica';
 }
+
+.card-image {
+    padding: 0em 3em;
+}

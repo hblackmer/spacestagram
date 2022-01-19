@@ -21,9 +21,10 @@ const Picture = ({ picture, title, explanation }) => {
                 </CardSubtitle>
             </CardBody>
             <CardImg
-                alt="Card image cap"
+                className="card-image"
+                alt={explanation}
                 src={picture}
-                width="100%"
+                width="50%"
             />
             <CardBody>
                 <CardText>
