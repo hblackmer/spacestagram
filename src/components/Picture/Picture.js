@@ -39,9 +39,7 @@ const Picture = ({ picture, title, explanation, loading }) => {
                     />
                 </Fragment>
                 :
-                <Spinner animation="border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </Spinner>
+                <Spinner animation="border" role="status" />
             }
         </Card>
     );
