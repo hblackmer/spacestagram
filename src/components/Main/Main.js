@@ -9,6 +9,7 @@ import './Main.css';
 const Main = () => {
     const [picture, setPicture] = useState('');
     const [title, setTitle] = useState('');
+    const [date, setDate] = useState('');
     const [explanation, setExplanation] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -24,6 +25,7 @@ const Main = () => {
                 console.log(res);
                 setPicture(res.data.hdurl);
                 setTitle(res.data.title);
+                setDate(res.data.date);
                 setExplanation(res.data.explanation);
             });
             setLoading(true);
@@ -36,6 +38,7 @@ const Main = () => {
             <Info 
                 picture={picture}
                 title={title}
+                date={date}
                 explanation={explanation}
                 loading={loading}
             />
