@@ -1,14 +1,15 @@
 import React, { Fragment } from 'react';
 import {
-    Card, CardImg, CardText, CardBody, CardLink,
+    Card, CardImg, CardBody, CardLink,
     CardTitle, CardSubtitle, Spinner
 } from 'reactstrap';
+import Share from '../Share/Share';
 
 import './Picture.css';
 
 const Picture = ({ picture, title, explanation, loading }) => {
     return (
-        <Card className="card text-white bg-black">
+        <Card className="card text-white bg-black mb-5">
             {loading ?
                 <Fragment>
                     <CardBody>
@@ -32,10 +33,12 @@ const Picture = ({ picture, title, explanation, loading }) => {
                         <CardLink href="#">
                             Like
                         </CardLink>
-                        <CardLink href="#">
-                            Share
-                        </CardLink>
                     </CardBody>
+                    <Share
+                        picture={picture}
+                        title={title}
+                        explanation={explanation}
+                    />
                 </Fragment>
                 :
                 <Spinner animation="border" role="status">
