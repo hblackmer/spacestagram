@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container } from 'reactstrap';
+import { Container, Button } from 'reactstrap';
 import Info from '../Info/Info';
 import axios from 'axios';
 import { API_KEY } from '../key';
@@ -15,9 +15,11 @@ const Main = () => {
     }, []);
 
     const getPictures = async () => {
+        window.scrollTo(0,0);
         try {
+            setLoading(false);
             await axios
-            .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=10`)
+            .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=4`)
             .then(res => {
                 console.log(res);
                 setPictures(res.data);
@@ -28,13 +30,14 @@ const Main = () => {
         }
     }
     return (
-        <Container className="main mx-auto">
+        <Container className="main mx-auto mb-5">
             {pictures.map( picture =>
                 <Info 
                     picture={picture}
                     loading={loading}
                 />
             )}
+            <Button onClick={getPictures}>Load More</Button>
         </Container>
     );
 }
