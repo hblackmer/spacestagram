@@ -19,13 +19,13 @@ const App = () => {
             <Navigation />
             <Router>
                 <Switch>
-                    <Route path="/" exact>
+                    <Route path="/spacestagram" exact>
                         <Main />
                     </Route>
-                    <Route path="/favorites" exact>
+                    <Route path="/spacestagram/favorites" exact>
                         <Favorites />
                     </Route>
-                    <Redirect to="/" />
+                    <Redirect to="/spacestagram" />
                 </Switch>
             </Router>
         </Fragment>
