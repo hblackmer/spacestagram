@@ -31,7 +31,7 @@ const Main = () => {
     }
     return (
         <Container className="main mx-auto mb-5">
-            <h4>Explore randomized images with description from NASA!</h4>
+            <h4>Explore and share randomized images from NASA!</h4>
             {pictures.map( picture =>
                 <Info 
                     picture={picture}
