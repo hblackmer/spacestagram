@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import {
-    Card, CardImg, CardBody, CardLink,
+    Card, CardImg, CardBody,
     CardTitle, CardSubtitle, CardText,
-    Spinner
+    Spinner, Button
 } from 'reactstrap';
 import Share from '../Share/Share';
 
@@ -33,6 +33,7 @@ const Info = ({ picture, title, date, explanation, loading }) => {
                     <CardText className="mx-auto mt-1">
                         <span>Date posted: {date} </span>
                     </CardText>
+                    <Button className="mb-3"><i class="far fa-heart"></i> Add to Favorites</Button>
                     <Share
                         picture={picture}
                     />
