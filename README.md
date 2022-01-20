@@ -6,7 +6,7 @@
   <p align="center">
     Explore photos from NASA's Astronomy Picture of the Day API
     <br />
-    <a href="www.heleneblackmer.com/spacestagram/">View Demo</a>
+    <a href="https://www.heleneblackmer.com/spacestagram/">View Demo</a>
     ·
     <a href="https://github.com/hblackmer/spacestagram/issues">Report Bug</a>
     ·
