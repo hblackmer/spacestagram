@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import {
     Card, CardImg, CardBody,
     CardTitle, CardSubtitle, CardText,
@@ -9,6 +9,12 @@ import Share from '../Share/Share';
 import './Info.css';
 
 const Info = ({ picture, title, date, explanation, loading }) => {
+    const [favorite, setFavorite] = useState(false);
+
+    const handleClick = () => {
+        setFavorite(!favorite);
+    }
+
     return (
         <Card className="card text-white bg-black mb-5">
             {loading ?
@@ -33,7 +39,11 @@ const Info = ({ picture, title, date, explanation, loading }) => {
                     <CardText className="mx-auto mt-1">
                         <span>Date posted: {date} </span>
                     </CardText>
-                    <Button className="mb-3"><i class="far fa-heart"></i> Add to Favorites</Button>
+                    <Button className="mb-3 btn-block" onClick={handleClick}>
+                        {favorite ? 
+                            <span><i class="fa fa-heart"></i> Added to Favorites</span> :
+                            <span><i class="far fa-heart"></i> Add to Favorites</span>}
+                    </Button>
                     <Share
                         picture={picture}
                     />
