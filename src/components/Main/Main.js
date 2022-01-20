@@ -37,7 +37,7 @@ const Main = () => {
                     loading={loading}
                 />
             )}
-            <Button onClick={getPictures}>Load More</Button>
+            <Button onClick={getPictures} >Load More</Button>
         </Container>
     );
 }

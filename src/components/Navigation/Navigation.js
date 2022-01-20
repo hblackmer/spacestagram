@@ -23,11 +23,13 @@ const Navigation = () => {
                     <Nav
                         navbar
                     >
+                        {/*
+                        // Future Implementation
                         <NavItem>
                             <NavLink href="/favorites">
                                 Favorites
                             </NavLink>
-                        </NavItem>
+                        </NavItem> */}
                         <UncontrolledDropdown
                         className="position-absolute top-0 end-0 p-3"
                             inNavbar

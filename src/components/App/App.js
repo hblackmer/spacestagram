@@ -9,7 +9,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Main from '../Main/Main';
-import Favorites from '../Favorites/Favorites';
+import Favorites from '../Favorites/Favorites'; //Not used, for future implementation
 import Navigation from '../Navigation/Navigation';
 
 const App = () => {
