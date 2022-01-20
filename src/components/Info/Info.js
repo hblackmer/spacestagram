@@ -8,7 +8,7 @@ import Share from '../Share/Share';
 
 import './Info.css';
 
-const Info = ({ picture, title, date, explanation, loading }) => {
+const Info = ({ picture, loading }) => {
     const [favorite, setFavorite] = useState(false);
 
     const handleClick = () => {
@@ -21,31 +21,31 @@ const Info = ({ picture, title, date, explanation, loading }) => {
                 <Fragment>
                     <CardBody>
                         <CardTitle tag="h5">
-                            {title}
+                            {picture.title}
                         </CardTitle>
                         <CardSubtitle
                             className="mb-2 text-muted"
                             tag="h6"
                         >
-                            {explanation}
+                            {picture.explanation}
                         </CardSubtitle>
                     </CardBody>
                     <CardImg
                         className="card-image"
-                        alt={explanation}
-                        src={picture}
+                        alt={picture.explanation}
+                        src={picture.url}
                         width="50%"
                     />
                     <CardText className="mx-auto mt-1">
-                        <span>Date posted: {date} </span>
+                        <span>Date posted: {picture.date} </span>
                     </CardText>
                     <Button className="mb-3 btn-block" onClick={handleClick}>
                         {favorite ? 
-                            <span><i class="fa fa-heart"></i> Added to Favorites</span> :
-                            <span><i class="far fa-heart"></i> Add to Favorites</span>}
+                            <i class="fa fa-heart"></i> :
+                            <i class="far fa-heart"></i>}
                     </Button>
                     <Share
-                        picture={picture}
+                        picture={picture.url}
                     />
                 </Fragment>
                 :

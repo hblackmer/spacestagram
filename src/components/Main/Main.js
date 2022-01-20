@@ -7,26 +7,20 @@ import { API_KEY } from '../key';
 import './Main.css';
 
 const Main = () => {
-    const [picture, setPicture] = useState('');
-    const [title, setTitle] = useState('');
-    const [date, setDate] = useState('');
-    const [explanation, setExplanation] = useState('');
+    const [pictures, setPictures] = useState([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        getPicture();
+        getPictures();
     }, []);
 
-    const getPicture = async () => {
+    const getPictures = async () => {
         try {
             await axios
-            .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
+            .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=10`)
             .then(res => {
                 console.log(res);
-                setPicture(res.data.hdurl);
-                setTitle(res.data.title);
-                setDate(res.data.date);
-                setExplanation(res.data.explanation);
+                setPictures(res.data);
             });
             setLoading(true);
         } catch (e) {
@@ -35,13 +29,12 @@ const Main = () => {
     }
     return (
         <Container className="main mx-auto">
-            <Info 
-                picture={picture}
-                title={title}
-                date={date}
-                explanation={explanation}
-                loading={loading}
-            />
+            {pictures.map( picture =>
+                <Info 
+                    picture={picture}
+                    loading={loading}
+                />
+            )}
         </Container>
     );
 }
